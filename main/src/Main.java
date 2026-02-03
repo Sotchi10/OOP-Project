@@ -12,5 +12,6 @@ public class Main {
         service.addExpense(user, 100);
 
         System.out.println("Your current balance: $" + service.showBalance(user));
+        System.out.println("Your current balance: $" + service.showBalance(user));
     }
 }

@@ -13,5 +13,7 @@ public class Main {
 
         System.out.println("Your current balance: $" + service.showBalance(user));
         System.out.println("Your current balance: $" + service.showBalance(user));
+        System.out.println("Your current balance: $" + service.showBalance(user));
+        System.out.println("Your current balance: $" + service.showBalance(user));
     }
 }

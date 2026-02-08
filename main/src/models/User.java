@@ -7,11 +7,6 @@ public class User {
     private String password;
     private double balance;
 
-    //This field is for counting the amount of time that user addincome or addexpense (used in line 73, 78)
-    private int in_count = 0;
-    private int out_count = 0;
-
-
     // Constructor
     public User(String name, int age, String email, String password) {
         setName(name);
@@ -36,13 +31,6 @@ public class User {
 
     public double getBalance() {
         return balance;
-    }
-
-    public double getIncomeTime() {
-        return in_count;
-    }
-    public double getExpenseTime() {
-        return out_count;
     }
 
     // Setters
@@ -70,11 +58,9 @@ public class User {
     //Methods for user balance
     public void increaseBalance(double amount) {
         balance += amount;
-        in_count++;
     }
 
     public void decreaseBalance(double amount) {
         balance -= amount;
-        out_count++;
     }
 }

@@ -1,6 +1,8 @@
 package service;
 
 import models.User;
+import models.Record;
+
 
 public class BudgetService {
 
@@ -18,5 +20,10 @@ public class BudgetService {
 
     public double showBalance(User user) {
         return user.getBalance();
+    }
+
+    
+    public void tanscript(User user) {
+        
     }
 }

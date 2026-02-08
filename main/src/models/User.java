@@ -1,11 +1,17 @@
 package models;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private String name;
     private int age;
     private String email;
     private String password;
     private double balance;
+
+    private List<Record> record = new ArrayList<>(); 
 
     //This field is for counting the amount of time that user addincome or addexpense (used in line 73, 78)
     private int in_count = 0;
@@ -38,6 +44,7 @@ public class User {
         return balance;
     }
 
+    //Get income and expense time 
     public double getIncomeTime() {
         return in_count;
     }

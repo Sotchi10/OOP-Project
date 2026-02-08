@@ -11,9 +11,8 @@ public class Main {
         service.addIncome(user, 500, "Salary");
         service.addExpense(user, 100, "Food");
 
-
-        System.out.println("Income: "  );
-        System.out.println("Outcome: " );
+        
+        
         System.out.println("Your current balance: $" + service.showBalance(user));
         
     }

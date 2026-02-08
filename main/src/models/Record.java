@@ -1,13 +1,18 @@
 package models;
 
+<<<<<<< HEAD
 import java.time.LocalDate;
+=======
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> 209b7d35cb03cc0541f96d5e8ae308c0698782e5
 
 public class Record {
     private String record_id;
     private String type;
     private LocalDate date;
     private User user;
-
+    private List<String> activities;
     private static int qty = 0;
 
     public Record(String type, int amount, LocalDate date, String des) {
@@ -22,6 +27,7 @@ public class Record {
     //Added Income: +300$ from salary
     //Added Income: +100$ from gift
     //Added Expense: -100$ on shoes
+<<<<<<< HEAD
     
 
     //Overall amount of user activity record
@@ -30,3 +36,35 @@ public class Record {
     }
     
 }   
+=======
+    public Record(User user) {
+        qty++;
+        this.user = user;
+        this.record_id = "user" + qty;
+        this.activities = new ArrayList<>();
+    }
+
+    public String getRecord_id(){
+        return record_id;
+    }
+
+    void addIncome(double amount, String source){
+        String Activity = "Added Income: +" + amount + "$ from " + source;
+        activities.add(Activity);
+    }
+
+    void addExpense(double amount, String source){
+        String Activity = "Added Income: -" + amount + "$ from " + source;
+        activities.add(Activity);
+    }
+
+    //print all activities
+    public void printactivities(){
+        System.out.println("User---------------------------");
+        for (String Activity: activities){
+            System.out.println(Activity);
+        }
+    }
+    
+}
+>>>>>>> 209b7d35cb03cc0541f96d5e8ae308c0698782e5

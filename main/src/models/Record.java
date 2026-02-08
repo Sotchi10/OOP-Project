@@ -1,0 +1,48 @@
+package models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Record {
+    private String record_id;
+    private User user;
+    private List<String> activities;
+    private static int qty = 0;
+
+    //qty is for recording the amount of user after creating, the plan of Record class is to record user activity
+    //such as what user spent on + where the income comes from
+    //Sample output: 
+    //User---------------------------
+    //Added Income: +300$ from salary
+    //Added Income: +100$ from gift
+    //Added Expense: -100$ on shoes
+    public Record(User user) {
+        qty++;
+        this.user = user;
+        this.record_id = "user" + qty;
+        this.activities = new ArrayList<>();
+    }
+
+    public String getRecord_id(){
+        return record_id;
+    }
+
+    void addIncome(double amount, String source){
+        String Activity = "Added Income: +" + amount + "$ from " + source;
+        activities.add(Activity);
+    }
+
+    void addExpense(double amount, String source){
+        String Activity = "Added Income: -" + amount + "$ from " + source;
+        activities.add(Activity);
+    }
+
+    //print all activities
+    public void printactivities(){
+        System.out.println("User---------------------------");
+        for (String Activity: activities){
+            System.out.println(Activity);
+        }
+    }
+    
+}
